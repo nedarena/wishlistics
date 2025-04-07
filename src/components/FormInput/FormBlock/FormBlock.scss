@@ -1,0 +1,13 @@
+.block-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 16px;
+    gap: 10px;
+
+    input {
+        border: 1px solid #000;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}

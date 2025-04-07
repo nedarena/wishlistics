@@ -1,7 +1,7 @@
 import "./Btn.scss";
 
-export const Btn = (text) => {
+export const Btn = ({ text }: { text: string }) => {
   return <>
-  <button>{text}</button>
+  <button className="btn">{text}</button>
   </>;
 };

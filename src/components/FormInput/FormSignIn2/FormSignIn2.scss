@@ -1,0 +1,30 @@
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+
+    h2 {
+        text-align: center;
+        font-size: 48px;
+        padding-bottom: 30px;
+    }
+        
+    span {
+        border-bottom: 1px solid #000;
+    }
+
+    .formshell-header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .row2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
