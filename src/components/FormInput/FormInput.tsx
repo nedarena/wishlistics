@@ -14,6 +14,5 @@ export const FormInput = () => {
         </form>
         <Btn text="Войти"></Btn>
     </div>
-
   </>;
 };

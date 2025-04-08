@@ -1,6 +1,10 @@
 import "./Btn.scss";
 
-export const Btn = (text) => {
+interface ButtonProps {
+  text: string,
+}
+
+export const Btn : React.FC<ButtonProps> = ({text}) => {
   return <>
   <button>{text}</button>
   </>;
