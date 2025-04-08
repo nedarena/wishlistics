@@ -1,0 +1,257 @@
+// *************** NAV ***************
+
+.landing {
+}
+
+.nav {
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 24px;
+}
+.menu {
+    display: flex;
+    gap: 50px;
+}
+.menu__item {
+    font-weight: 400;
+    font-size: 12px;
+}
+.btns {
+    display: flex;
+    gap: 10px;
+}
+.btn {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.container {
+    padding: 100px 300px;
+}
+
+// *************** HERO ***************
+
+.hero {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+.hero__info {
+}
+.big-title {
+    font-weight: 500;
+    font-size: 32px;
+    padding-bottom: 5px;
+}
+.hero-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    padding-bottom: 20px;
+}
+.hero-btn {
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.hero__img {
+    width: 350px;
+    height: 350px;
+    background: #000;
+    justify-self: end;
+}
+
+// *************** WISH ***************
+
+.wish {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0 30px 0;
+    color: #666;
+    text-align: center;
+}
+
+.wish__list {
+    display: flex;
+    gap: 30px;
+}
+
+.wish__list-item {
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #E4E4E7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.wish__list-item-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #666;
+}
+
+.wish__list-item-name {
+    font-size: 18px;
+}
+
+.wish__list-item-text {
+    font-size: 14px;
+    color: #666;
+}
+
+// *************** ADVANTAGES ***************
+
+.advantages {
+}
+
+.advantages__list {
+    display: flex;
+    gap: 50px;
+}
+.advantages__list-item {
+    display: flex;
+    gap: 20px;
+}
+.advantages__list-item-img {
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 45px;
+    max-height: 45px;
+    border-radius: 50%;
+    background: #666;
+}
+
+.advantages__list-item-wripper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.advantages__list-item-name {
+    font-size: 18px;
+}
+.advantages__list-item-text {
+    font-size: 14px;
+    color: #666;
+}
+
+// *************** COMMENT ***************
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px 0 30px 0;
+    color: #666;
+    text-align: center;
+}
+
+.comments__list {
+    display: flex;
+    gap: 30px;
+}
+
+.comments__list-item {
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #E4E4E7;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+    text-align: left;
+}
+
+.comments__list-item-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #666;
+}
+
+.comments__list-item-name {
+    font-size: 18px;
+}
+
+.comments__list-item-text {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.comments__list-item-wripper {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+
+// *************** CTA ***************
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// *************** FOOTER ***************
+
+.landing-footer {
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #000;
+}
+
+.footer-cta {
+    font-size: 12px;
+}
+
+.footer-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-btn {
+    padding: 10px;
+    // border: 1px solid #000;
+    // border-radius: 10px;
+    font-size: 12px;
+}
