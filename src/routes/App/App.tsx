@@ -1,8 +1,8 @@
 import "./App.scss";
-import {FormSignIn2} from "@/components/FormInput/FormSignIn2/FormSignIn2"
+import {Landing} from "@/routes/Landing/Landing"
 
 export const App = () => {
   return <>
-  <FormSignIn2></FormSignIn2>
+  <Landing></Landing>
   </>;
 };
