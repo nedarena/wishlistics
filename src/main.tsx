@@ -6,6 +6,7 @@ import { App } from "@/routes/App/App";
 import { Auth } from "@/routes/Auth/Auth";
 import { Login } from "./layout/Login/Login";
 import { Registration } from "./layout/Registration/Registration";
+import './index.scss';
 
 // Защищенный маршрут - перенаправляет на главную, если пользователь не авторизован
 const ProtectedRoute = () => {
