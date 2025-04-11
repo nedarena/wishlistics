@@ -36,6 +36,7 @@ button {
     color: #000;
     font-size: 14px;
     cursor: pointer;
+    background-color: #fff;
 }
 
 // *************** HEADER ***************
@@ -235,10 +236,6 @@ button {
   gap: 30px;
   background-color: #3E3E3E !important;
   color: #fff;
-
-  &__button {
-    background-color: #fff;
-  }
 }
 
 // *************** FOOTER ***************

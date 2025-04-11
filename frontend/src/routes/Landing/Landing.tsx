@@ -4,7 +4,7 @@ export const Landing = () => {
   return (
     <>
       <header className="header">
-        <h2 className="logo">Вишлистикс</h2>
+        <h2 className="header__logo">Вишлистикс</h2>
         <nav className="header-navigation">
           <ul className="header-navigation__menu">
             <li className="header-navigation__item">Возможности</li>
