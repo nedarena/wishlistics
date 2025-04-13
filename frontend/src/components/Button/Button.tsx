@@ -8,6 +8,7 @@ interface ButtonProps {
 }
 
 export const Button : React.FC<ButtonProps> = ({ text, type, img, onClick }) => {
+  // Refactor подумать как submit сделать
   return (
     <button className={`button button_${type}`} onClick={onClick}>
       {text}

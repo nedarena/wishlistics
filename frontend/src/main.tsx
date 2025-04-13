@@ -7,10 +7,11 @@ import { Auth } from "@/routes/Auth/Auth";
 import { Login } from "./layout/Login/Login";
 import { Registration } from "./layout/Registration/Registration";
 import './index.scss';
+import { useAuth } from "./store/useAuth";
 
 // Защищенный маршрут - перенаправляет на главную, если пользователь не авторизован
 const ProtectedRoute = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = useAuth(state => state.isAuthenticated);
 
   if (!isAuthenticated) {
     return <Navigate to="/" replace />
@@ -21,7 +22,7 @@ const ProtectedRoute = () => {
 
 // Маршрут для неавторизованных - перенаправляет в приложение, если пользователь авторизован
 const PublicRoute = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = useAuth(state => state.isAuthenticated);
 
   if (isAuthenticated) {
     return <Navigate to="/app" replace />

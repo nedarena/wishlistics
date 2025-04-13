@@ -1,4 +1,5 @@
 import "./Landing.style.scss";
+import { NavLink } from "react-router";
 
 export const Landing = () => {
   return (
@@ -13,8 +14,8 @@ export const Landing = () => {
           </ul>
         </nav>
         <div className="header__buttons">
-          <button className="header__button">Войти</button>
-          <button className="header__button">Регистрация</button>
+          <button className="header__button"><NavLink to={'/auth/login'}>Вход</NavLink></button>
+          <button className="header__button"><NavLink to={'/auth/registration'}>Регистрация</NavLink></button>
         </div>
       </header>
 
