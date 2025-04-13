@@ -2,34 +2,58 @@ import './Login.style.scss';
 import { Form } from '@/components/Form/Form';
 import { Input } from '@/components/Input/Input';
 import { Button } from '@/components/Button/Button';
-import { useAuth } from '../../store/useAuth';
-import { useRef } from 'react';
+import { useAuth } from '@/store/useAuth';
+import { useState } from 'react';
 
 export const Login = () => {
-  // Refactor весь файл. Подумать над стилизацией кода
-  const emailRef = useRef<HTMLInputElement>(null);
-  const passwordRef = useRef<HTMLInputElement>(null);
   const login = useAuth(state => state.login);
-  
-  const handleLogin = () => {
-    const email = emailRef.current?.value;
-    const password = passwordRef.current?.value;
 
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (field: keyof typeof formData) => 
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormData(prev => ({ ...prev, [field]: e.target.value }));
+    };
+
+  const handleLogin = () => {
+    const { email, password } = formData;
     if (email && password) {
       login(email, password);
     }
-  }
+  };
 
   return (
-    <div className='login'>
-      <h1 className='logo'>Вишлистикс</h1>
+    <div className="login">
+      <h1 className="logo">Вишлистикс</h1>
       <Form>
         <h2 className="login__title">Авторизация</h2>
-        <Input ref={emailRef} label='Email' placeholder='example@gmail.com' type='email'></Input>
-        <Input ref={passwordRef} label='Пароль' placeholder='введите пароль' type='password'></Input>
-        <Button text='войти' type='black' onClick={handleLogin} />
-        <p className='login__question'>Нет аккаунта?<span className='login__to-registration'>Зарегистрироваться</span></p>
+        <Input
+          label="Email"
+          placeholder="example@gmail.com"
+          type="email"
+          value={formData.email}
+          onChange={handleChange("email")}
+        />
+        <Input
+          label="Пароль"
+          placeholder="Введите пароль"
+          type="password"
+          value={formData.password}
+          onChange={handleChange("password")}
+        />
+        <Button
+          text="Войти"
+          type="black"
+          onClick={handleLogin}
+        />
+        <p className="login__question">
+          Нет аккаунта?
+          <span className="login__to-registration">Зарегистрироваться</span>
+        </p>
       </Form>
     </div>
-  )
-}
+  );
+};
