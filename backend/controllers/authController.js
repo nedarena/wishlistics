@@ -39,8 +39,6 @@ exports.login = async (req, res) => {
 
     const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '7d' });
     res.json({ token });
-    // Refactor убрать после разработки
-    console.log(`User ${email} with password ${password} are login in \nwith token ${token}`);
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Error logging in, please try again later' });

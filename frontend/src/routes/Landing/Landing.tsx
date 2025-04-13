@@ -14,8 +14,8 @@ export const Landing = () => {
           </ul>
         </nav>
         <div className="header__buttons">
-          <button className="header__button"><NavLink to={'/auth/login'}>Вход</NavLink></button>
-          <button className="header__button"><NavLink to={'/auth/registration'}>Регистрация</NavLink></button>
+          <NavLink to={'/auth/login'}><button className="header__button">Вход</button></NavLink>
+          <NavLink to={'/auth/registration'}><button className="header__button">Регистрация</button></NavLink>
         </div>
       </header>
 

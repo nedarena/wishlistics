@@ -3,7 +3,7 @@ import './Input.style.scss';
 interface InputProps {
   label?: string,
   icon?: string,
-  placeholder: string,
+  placeholder?: string,
   type: string,
   ref?: React.Ref<HTMLInputElement> | null
 }
