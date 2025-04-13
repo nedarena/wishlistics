@@ -1,9 +1,11 @@
 import "./App.scss";
+import { Registration } from "@/layout/Registration/Registration";
 
 export const App = () => {
   return (
     <>
-      <header>
+    <Registration></Registration>
+      {/* <header>
         <h1>Logo</h1>
         <nav>
           <ul>
@@ -16,7 +18,7 @@ export const App = () => {
       </header>
       <main>
         <h1>Main</h1>
-      </main>
+      </main> */}
     </>
   );
 };

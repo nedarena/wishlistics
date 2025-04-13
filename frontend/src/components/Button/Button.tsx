@@ -11,7 +11,7 @@ export const Button : React.FC<ButtonProps> = ({ text, type, img, onClick }) => 
   return (
     <button className={`button button_${type}`} onClick={onClick}>
       {text}
-      {img && <img src={img} className='button-icon-img'/>}
+      {img && <img src={img} className='button__icon-img'/>}
     </button>
   )
 }

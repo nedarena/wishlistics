@@ -1,0 +1,54 @@
+.registration {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+
+    .registration__header {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+
+        .registration__text {
+            .registration__title {
+            }
+
+            .registration__subtitle {
+
+            }
+        }
+
+        .registration__step {
+            font-size: 14px;
+        }
+    }
+    
+    .registration__question {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+
+        .registration__to-login {
+            text-decoration: underline;
+        }
+    }
+    
+}
+
+.registration__input-block {
+    display: flex;
+    gap: 20px;
+}
+
+
+.registration__button-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

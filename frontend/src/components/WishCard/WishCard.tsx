@@ -1,4 +1,4 @@
-import "./Wishcart.style.scss";
+import "./WishCard.style.scss";
 import { Button } from "../Button/Button";
 import icon from "@/assets/icon.svg";
 
@@ -9,7 +9,7 @@ interface WishCardProps {
   img: string;
 }
 
-export const Wish: React.FC<WishCardProps> = ({
+export const WishCard: React.FC<WishCardProps> = ({
   title,
   price,
   comment,
@@ -17,9 +17,9 @@ export const Wish: React.FC<WishCardProps> = ({
 }) => {
   return (
     // Refactor переделать классы по бэм
-    <div className="wishcart">
-      <img className="wishcart-img" src={img} alt="#" />
-      <div className="wishcart__action">
+    <div className="wish-card">
+      <img className="wish-card__img" src={img} alt="#" />
+      <div className="wish-card__action">
         {/* Refactor сделать onClick */}
         <Button
           onClick={() => console.log("Кнопка нажата")}
@@ -37,10 +37,10 @@ export const Wish: React.FC<WishCardProps> = ({
           type="img"
         ></Button>
       </div>
-      <div className="wishcart-info">
-        <p className="wishcart-title">{title}</p>
-        <p className="wishcart-price">{price} ₽</p>
-        <p className="wishcart-comment">{comment || "Нет комментариев..."}</p>
+      <div className="wish-card__info">
+        <p className="wish-card__title">{title}</p>
+        <p className="wish-card__price">{price} ₽</p>
+        <p className="wish-card__comment">{comment || "Нет комментариев..."}</p>
       </div>
     </div>
   );
