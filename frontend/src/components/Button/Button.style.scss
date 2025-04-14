@@ -29,3 +29,16 @@
 .button::first-letter {
     text-transform: uppercase;
 }
+
+.button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-align: center !important;
+    justify-content: center;
+    border: 1px solid;
+}
+
+.button:hover {
+    cursor: pointer;
+}

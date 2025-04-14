@@ -1,0 +1,72 @@
+.all-wishes {
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    &__title {
+
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+    }
+    &__search {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        width: 100%;
+    }
+
+    &__search:focus {
+        border: 1px solid #8c8c8c;
+    }
+
+    &__select {
+        padding: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        width: fit-content;
+    }
+
+    &__wishes {
+        padding: 0px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        height: calc(100vh - 180px);
+    }
+}
+
+.modal-price{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+
+
+}
+
+.modal-currency {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-select {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+}

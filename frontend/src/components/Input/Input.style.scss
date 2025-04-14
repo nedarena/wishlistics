@@ -2,33 +2,25 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
 
     .input__label {
     }
     .input__block {
-        // position: relative;
-        // border: 1px solid #000;
         border-radius: 10px;
-        // display: flex;
-        // align-items: center;
 
         .input__enter {
             width: 100%;
             padding: 10px;
             border: 1px solid #000;
         border-radius: 10px;
-        // z-index: 0;
+        font-size: 14px;
+        font-weight: 300;
         }
         .input__enter:focus {
             outline: none;
             border: 1px solid #8c8c8c;
         }
-
-        // .input__icon {
-        //     position: absolute;
-        //     right: 10px;
-        //     z-index: 3;
-        // }
     }
         
 }

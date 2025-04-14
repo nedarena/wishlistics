@@ -1,4 +1,4 @@
-import "./Landing.style.scss";
+// import "./Landing.style.scss";
 import { NavLink } from "react-router";
 
 export const Landing = () => {

@@ -1,0 +1,122 @@
+.profile {
+    width: 100%;
+    position: relative;
+
+    &-header {
+        display: grid;
+        background: #EEEEEE;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        padding: 20px 50px;
+        gap: 20px;
+        
+        &__avatar {
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #fff;
+            width: 100px;
+            height: 100px;
+        }
+
+        &__text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        &__name {
+            font-size: 24px;
+        }
+
+        &__info {
+            display: flex;
+            gap: 15px;
+
+        }
+
+        &__wish {
+
+        }
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 50px;
+    }
+
+    &-wishlists {
+        padding: 0px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 30px;
+        overflow-y: scroll;
+  scroll-behavior: smooth;
+  height: calc(100vh - 260px);
+    }
+
+    &__no-wishlists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        &__title {
+            font-weight: 400;
+        }
+    }
+}
+
+.modal-description {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    resize: none;
+    font-weight: 300;
+    font-size: 14px;
+    height: 100px;
+
+    &:focus {
+        outline: none;
+        border: 1px solid #8c8c8c;
+    }
+
+    &__label {
+
+    }
+}
+
+.modal-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-private {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__label {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    &__subtitle {
+        font-size: 12px;
+        font-weight: 300;
+        color: #666666;
+    }
+}
+
+.modal-checkbox {
+    width: 20px;
+    height: 20px;
+}

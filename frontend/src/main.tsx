@@ -11,7 +11,8 @@ import { useAuth } from "./store/useAuth";
 
 // Защищенный маршрут - перенаправляет на главную, если пользователь не авторизован
 const ProtectedRoute = () => {
-  const isAuthenticated = useAuth(state => state.isAuthenticated);
+  // const isAuthenticated = useAuth(state => state.isAuthenticated);
+  const isAuthenticated = true;
 
   if (!isAuthenticated) {
     return <Navigate to="/" replace />
@@ -22,7 +23,8 @@ const ProtectedRoute = () => {
 
 // Маршрут для неавторизованных - перенаправляет в приложение, если пользователь авторизован
 const PublicRoute = () => {
-  const isAuthenticated = useAuth(state => state.isAuthenticated);
+  // const isAuthenticated = useAuth(state => state.isAuthenticated);
+  const isAuthenticated = true;
 
   if (isAuthenticated) {
     return <Navigate to="/app" replace />
