@@ -31,18 +31,6 @@ const wishes = [
         img: img,
         price: 5
     },
-    {
-        title: 'Платешко',
-        comment: '',
-        img: img,
-        price: 5
-    },
-    {
-        title: 'Платешко',
-        comment: '',
-        img: img,
-        price: 5
-    },
 ]
 
 export const AllWishes = () => {
@@ -52,7 +40,7 @@ export const AllWishes = () => {
     <div className="all-wishes">
         <h1 className="all-wishes__title">Все желания</h1>
         <div className="all-wishes__nav">
-            <input className="all-wishes__search" type="search" name="" id="" />
+            <input className="all-wishes__search" type="search" name="" id="" placeholder="Найти желание..."/>
             <select className="all-wishes__select">
                 <option>Фильтры</option>
                 <option>Цена</option>

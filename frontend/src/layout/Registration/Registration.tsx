@@ -2,28 +2,38 @@ import "./Registration.style.scss";
 import { Form } from "@/components/Form/Form";
 import { Input } from "@/components/Input/Input";
 import { Button } from "@/components/Button/Button";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useAuth } from "@/store/useAuth";
+import { RegistrationData } from "@/types/user.types";
 
 export const Registration = () => {
-  const [step, setStep] = useState<number>(1);
-  const [email, setEmail] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  const [step, setStep] = useState(1);
+  const [formData, setFormData] = useState<RegistrationData>({
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+    birthDate: '',
+  });
 
-  const firstNameRef = useRef<HTMLInputElement>(null);
-  const secondNameRef = useRef<HTMLInputElement>(null);
-  const emailRef = useRef<HTMLInputElement>(null);
-  const passwordRef = useRef<HTMLInputElement>(null);
   const registration = useAuth(state => state.registration);
 
-  const handleRegistration = () => {
-    const firstName = firstNameRef.current?.value;
-    const secondName = secondNameRef.current?.value;
+  const handleChange = (field: keyof RegistrationData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+  };
 
-    if (email && password && firstName && secondName) {
-      registration(`${firstName} ${secondName}`, email, password);
+  const handleContinue = () => {
+    if (formData.email && formData.password) {
+      setStep(2);
     }
-  }
+  };
+
+  const handleRegistration = () => {
+    const { email, password, firstName, lastName, birthDate } = formData;
+    if (email && password && firstName && lastName && birthDate) {
+      registration(formData);
+    }
+  };
 
   return (
     <div className="registration">
@@ -36,38 +46,56 @@ export const Registration = () => {
           </div>
           <p className="registration__step">Шаг {step} из 2</p>
         </div>
-        {step === 1 && <>
-          <Input ref={emailRef} label="Email" placeholder="example@example.com" type="text"/>
-          <Input ref={passwordRef} label="Пароль" type="text"/>
-          <Button
-            text="Продолжить"
-            type="black"
-            onClick={() => {
-              setEmail(emailRef.current?.value);
-              setPassword(passwordRef.current?.value);
-              setStep(2);
-            }}
-          />
-        </>}
-        {step === 2 && <>
-          <div className="registration__input-block">
-            <Input ref={firstNameRef} label="Имя" placeholder="Иван" type="text"/>
-            <Input ref={secondNameRef} label="Фамилия" placeholder="Иванов" type="text"/>
-          </div>
-          <Input label="Дата рождения" placeholder="" type="date"/>
-          <div className="registration__button-block">
-            <Button
-              text="назад"
-              type="white"
-              onClick={() => setStep(1)}
+
+        {step === 1 && (
+          <>
+            <Input
+              label="Email"
+              placeholder="example@example.com"
+              type="text"
+              value={formData.email}
+              onChange={e => handleChange("email", e.target.value)}
             />
-            <Button
-              text="Зарегистрироваться"
-              type="black"
-              onClick={handleRegistration}
+            <Input
+              label="Пароль"
+              type="password"
+              value={formData.password}
+              onChange={e => handleChange("password", e.target.value)}
             />
-          </div>
-        </>}
+            <Button text="Продолжить" type="black" onClick={handleContinue} />
+          </>
+        )}
+
+        {step === 2 && (
+          <>
+            <div className="registration__input-block">
+              <Input
+                label="Имя"
+                placeholder="Иван"
+                type="text"
+                value={formData.firstName}
+                onChange={e => handleChange("firstName", e.target.value)}
+              />
+              <Input
+                label="Фамилия"
+                placeholder="Иванов"
+                type="text"
+                value={formData.lastName}
+                onChange={e => handleChange("lastName", e.target.value)}
+              />
+            </div>
+            <Input
+              label="Дата рождения"
+              type="date"
+              value={formData.birthDate}
+              onChange={e => handleChange("birthDate", e.target.value)}
+            />
+            <div className="registration__button-block">
+              <Button text="назад" type="white" onClick={() => setStep(1)} />
+              <Button text="Зарегистрироваться" type="black" onClick={handleRegistration} />
+            </div>
+          </>
+        )}
 
         <p className="registration__question">
           У вас есть аккаунт?

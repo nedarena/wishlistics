@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import {AllWishes} from "@/layout/AllWishes/AllWishes";
 import { Settings } from "@/layout/Settings/Settings";
 import { NavLink } from "react-router-dom";
+import { WishListPage } from "@/layout/WishListPage/WishListPage";
 
 
 export const App = () => {
@@ -19,9 +20,13 @@ export const App = () => {
           <nav className="navigation">
             <h1 className="logo">Вишлистикс</h1>
             <ul className="menu"> 
-            <NavLink to="/" className={({isActive}) => isActive ? "menu-item menu-item--active" : "menu-item"}>  
+            <NavLink to="/profile" className={({isActive}) => isActive ? "menu-item menu-item--active" : "menu-item"}>  
                 <img src={icon} alt="" className="menu-item__icon" /> 
                 <p className="menu-item__text">Профиль</p>
+            </NavLink>
+            <NavLink to="/wishlistpage" className={({isActive}) => isActive ? "menu-item menu-item--active" : "menu-item"}>  
+                <img src={icon} alt="" className="menu-item__icon" /> 
+                <p className="menu-item__text">вишлист</p>
             </NavLink>
             <NavLink to="/allwishes" className={({isActive}) => isActive ? "menu-item menu-item--active" : "menu-item"}>
                 <img src={icon} alt="" className="menu-item__icon" /> 
@@ -46,7 +51,8 @@ export const App = () => {
           </div>
         </section>
         <Routes>
-          <Route path="/" element={<Profile/>}/>
+          <Route path="/profile" element={<Profile/>}/>
+          <Route path="/wishlistpage" element={<WishListPage title="День рождения" comment="Что я хочу получить на др"/>}/>
           <Route path="/allwishes" element={<AllWishes/>}/>
           <Route path="settings" element={<Settings/>}/>
         </Routes>

@@ -44,6 +44,7 @@ export const WishList: React.FC<WishListProps> = ({
         <span className="wish-list__sum">{`${sum} желаний`}</span>
 
         <Button  text="Открыть вишлист" onClick={() => console.log("Кнопка нажата")} type="white" />
+        
       </div>
       
     </div>
